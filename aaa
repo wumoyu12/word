@@ -1,0 +1,14 @@
+//Name:Moyu Wu
+//Start Date:9/18/24
+//End Date:
+//Description-
+package Activity_MadLib;
+
+import java.util.Scanner;
+
+public class MadLib {
+	Scanner input = new Scanner(System.in);
+	String word;
+	System.out.println("Enter a grade");
+	word = input.nextLine();
+}
