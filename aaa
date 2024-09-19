@@ -1,14 +1,90 @@
-//Name:Moyu Wu
-//Start Date:9/18/24
-//End Date:
-//Description-
 package Activity_MadLib;
 
 import java.util.Scanner;
 
 public class MadLib {
-	Scanner input = new Scanner(System.in);
-	String word;
-	System.out.println("Enter a grade");
-	word = input.nextLine();
+	public static void main(String[] args) {
+		System.out.println("You will enetr 5 words, and I will use this five words creat a sentence.");
+		noun();
+	}
+	public static void noun(){
+		Scanner input = new Scanner(System.in);
+		String noun;
+		
+		System.out.println("Enter a noun");
+		noun = input.nextLine();
+		
+		if (noun.isEmpty()) {
+			System.out.println("It's invalid, Try again");
+			noun();
+		}
+		else
+		{
+			verb();
+		}
+		
+	}
+		
+		public static void verb() {
+			Scanner input = new Scanner(System.in);
+			String verb;
+			System.out.println("Enter a verb");
+			verb = input.nextLine();
+			
+			if (verb.isEmpty()) {
+				System.out.println("It's invalid, Try again");
+				verb();
+			}
+			else
+			{
+				adjective();
+			}
+		}
+		
+		public static void adjective() {
+			Scanner input = new Scanner(System.in);
+			String adjective;
+			System.out.println("Enter a adjective");
+			adjective = input.nextLine();
+			
+			if (adjective.isEmpty()) {
+				System.out.println("It's invalid, Try again");
+				adjective();
+			}
+			else
+			{
+				place();
+			}
+		}
+		public static void place() {
+			Scanner input = new Scanner(System.in);
+			String place;
+			System.out.println("Enter a place");
+			place = input.nextLine();
+			
+			if (place.isEmpty()) {
+				System.out.println("It's invalid, Try again");
+				place();
+			}
+			else
+			{
+				adverb();
+			}
+		}
+		
+		public static void adverb() {
+			Scanner input = new Scanner(System.in);
+			String adverb;
+			System.out.println("Enter a place");
+			adverb = input.nextLine();
+			
+			if (adverb.isEmpty()) {
+				System.out.println("It's invalid, Try again");
+				adverb();
+			}
+			else
+			{
+				System.out.println(" " + adverb);
+			}
+		}
 }
