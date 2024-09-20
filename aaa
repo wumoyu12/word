@@ -1,49 +1,38 @@
-package Activity_MadLib;
-
+package MadLib;
 import java.util.Scanner;
 
 public class MadLib {
 	public static void main(String[] args) {
-		System.out.println("You will enetr 5 words, and I will use this five words creat a sentence.");
-		noun();
-	}
-	public static void noun(){
 		Scanner input = new Scanner(System.in);
-		String noun;
-		
+		String noun, verb, adjective, place, adverb, sentence;
+		System.out.println("You will enetr 5 words, and I will use this five words creat a sentence.");
 		System.out.println("Enter a noun");
 		noun = input.nextLine();
-		
 		if (noun.isEmpty()) {
 			System.out.println("It's invalid, Try again");
-			noun();
+			System.out.println("Enter a noun");
+			noun = input.nextLine();
 		}
 		else
 		{
-			verb();
+			sentence = (noun + " ");
 		}
-		
-	}
-		
-		public static void verb() {
-			Scanner input = new Scanner(System.in);
-			String verb;
-			System.out.println("Enter a verb");
-			verb = input.nextLine();
+
+		System.out.println("Enter a verb");
+		verb = input.nextLine();
 			
 			if (verb.isEmpty()) {
 				System.out.println("It's invalid, Try again");
-				verb();
+				System.out.println("Enter a verb");
+				verb = input.nextLine();
 			}
 			else
 			{
-				adjective();
+				sentence = (sentence + verb);
 			}
 		}
-		
-		public static void adjective() {
-			Scanner input = new Scanner(System.in);
-			String adjective;
+
+	
 			System.out.println("Enter a adjective");
 			adjective = input.nextLine();
 			
